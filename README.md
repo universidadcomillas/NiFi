@@ -52,7 +52,7 @@ A continuación, ya podemos arrancar Nifi ejecutando el comando ./nifi.sh start 
 ```
 Tendréis que esperar un rato a que se termine de iniciar la aplicacion para poder entrar a la interfaz gráfica a través de la url [https://127.0.0.1:8443/nifi](https://127.0.0.1:8443/nifi).
 
-Los impacientes podréis seguir la ejecucion de la aplicacion desde la carpeta logs de la instalacion en una ventana en Powershell con el comando siguiente:
+Los impacientes podréis seguir la ejecucion de la aplicacion desde la carpeta logs de la instalacion en una ventana en Powershell (o terminal si lo has instalado en linux) con el comando siguiente:
 ```
 cat .\nifi-app.log 
 ```
