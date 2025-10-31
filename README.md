@@ -28,6 +28,8 @@
   - Para ver el estado actual de NiFi, hacer doble click sobre status-nifi.bat.
     Otra opcion es abrir una consola cmd, establecerse en el directorio anterior y ejecutar nifi.cmd status
 
+    >NOTA: Se recomienda dejar la carpeta de instalacion en un lugar del sistema de ficheros donde se tenga que acceder con nombres separados por algun espacio ya que windows se comporta de manera sensible en estos casos
+
 **Puesta en marcha**
 
 Para instalar Nifi, sólo hemos de descargar la última versión desde [https://nifi.apache.org](https://nifi.apache.org/) (en nuestro caso hemos descargado la version 1.27) y tras descomprimirla, debemos crear unas credenciales de acceso. Para ello, ejecutaremos el comando ./nifi.sh set-single-user-credentials <username> <password> indicando el usuario y contraseña que queramos.
@@ -36,11 +38,33 @@ Por ejemplo, nosotros hemos creado el usuario nifi/nifinifinifi:
 ```
 ./bin/nifi.sh set-single-user-credentials nifi nifinifinifi
 ```
+> En windows:
+```
+.\bin\nifi.cmd set-single-user-credentials nifi nifinifinifi
+```
 A continuación, ya podemos arrancar Nifi ejecutando el comando ./nifi.sh start (se ejecutará en *brackgound*):
 ```
 ./bin/nifi.sh start
 ```
+> En windows:
+```
+.\bin\nifi.cmd start
+```
+Tendréis que esperar un rato a que se termine de iniciar la aplicacion para poder entrar a la interfaz gráfica a través de la url [https://127.0.0.1:8443/nifi](https://127.0.0.1:8443/nifi).
+
+Los impacientes podréis seguir la ejecucion de la aplicacion desde la carpeta logs de la instalacion en una ventana en Powershell con el comando siguiente:
+```
+cat .\nifi-app.log 
+```
+
+Alli podréis ver algo como lo siguiente, al final de la ejecución:
+
+<img width="1446" height="63" alt="image" src="https://github.com/user-attachments/assets/c201a529-139b-4651-8f6f-67ccbbbbf67f" />
+
+En este momento ya estaremos listos para acceder a la interfaz de la aplicacion.
+
 Si queremos detenerlo ejecutaremos ./bin/nifi.sh stop.
+
 
 **Instalación con AWS**
 
