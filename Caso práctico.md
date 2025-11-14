@@ -463,4 +463,9 @@ switched to db mbd
 ### Actividades
 
 1. Realiza los casos de uso del 1 al 3. En la entrega debes adjuntar una captura de pantalla donde se vea el flujo de datos completo con una nota con tu nombre, y adjuntar la definición de cada flujo (sobre el área de trabajo, con el botón derecho, *Download flow definition*).
+
+![](images/DescargarFlowDef.png)
+
+_Descarga de la definicion de flujo_
+
 1. (opcional) Realiza el caso de uso 4.
