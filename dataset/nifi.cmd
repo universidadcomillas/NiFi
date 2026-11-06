@@ -1,5 +1,4 @@
 @echo off
-setlocal enabledelayedexpansion
 rem
 rem    Licensed to the Apache Software Foundation (ASF) under one or more
 rem    contributor license agreements.  See the NOTICE file distributed with
@@ -47,9 +46,8 @@ pushd %NIFI_HOME%
 
 set RUN_COMMAND="%~1"
 if %RUN_COMMAND% == "set-single-user-credentials" (
-  rem Set credentials with quoted arguments passed to Java command
-  set "CREDENTIALS=^"%~2^" ^"%~3^""
-  call "%JAVA_EXE%" %JAVA_PARAMS% org.apache.nifi.authentication.single.user.command.SetSingleUserCredentials !CREDENTIALS!
+  rem Pass username and password as separate quoted arguments
+  call "%JAVA_EXE%" %JAVA_PARAMS% org.apache.nifi.authentication.single.user.command.SetSingleUserCredentials "%~2" "%~3"
 ) else if %RUN_COMMAND% == "set-sensitive-properties-key" (
   call "%JAVA_EXE%" %JAVA_PARAMS% org.apache.nifi.flow.encryptor.command.SetSensitivePropertiesKey %~2
 ) else if %RUN_COMMAND% == "set-sensitive-properties-algorithm" (
