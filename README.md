@@ -28,7 +28,8 @@
   - Para ver el estado actual de NiFi, hacer doble click sobre status-nifi.bat.
     Otra opcion es abrir una consola cmd, establecerse en el directorio anterior y ejecutar nifi.cmd status
 
-    >NOTA: Se recomienda NO dejar la carpeta de instalacion en un lugar del sistema de ficheros donde se tenga que acceder con nombres separados por algun espacio ya que windows se comporta de manera sensible en estos casos
+    >NOTA: Se recomienda NO dejar la carpeta de instalacion en un lugar del sistema de ficheros donde se tenga que acceder con nombres separados por algun espacio ya que windows se comporta de manera sensible en estos casos.
+    >Descargar y Utilizar el script [nifi.cmd](dataset/nifi.cmd)
 
 **Puesta en marcha**
 
